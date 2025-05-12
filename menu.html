@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="menu.css">
+    <title>Welcome</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+        <div class="logo">
+            <a href="index.html">ParisPicNic</a>
+        </div>
+        <ul class="links">
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="about.html">A propos</a></li>
+        </ul>
+        <div class="buttons">
+            <a href="seconnecter.html" class="action-button">Se connecter</a>
+        </div>
+        <div class="burger-menu-button">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        </div>
+        <div class="burger-menu">
+            <ul class="links">
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="about.html">A propos</a></li>
+                <div class="divider"></div>
+                <div class="buttons-burger-menu">
+                    <a href="seconnecter.html" class="action-button">Se connecter</a>
+                </div>
+            </ul>
+        </div>
+    </header>
+<section class="menu">
+    <div class="main-container">
+        <div class="image-container">
+            <div class="rectangle">
+                <img src="https://bakeronline-paris.s3.eu-west-3.amazonaws.com/uploads/products/2780/1987922/thon-crud.jpg" alt="Image 1">
+            </div>
+            <span class="plus-sign">+</span>
+            <div class="rectangle">
+                <img src="https://www.monbento.com/blog/wp-content/uploads/actus/2015/septembre/monbento-gouter-equilibre.png" alt="Image 2">
+            </div>
+        </div>
+        <div class="button-container">
+            <button>Ajouter au panier</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="image-container">
+            <div class="rectangle">
+                <img src="https://www.unileverfoodsolutions.ch/dam/global-ufs/mcos/dach/calcmenu-recipes/ch-recipes/2019/sandwich-club/schinkensandwich/main-header.jpg" alt="Image 1">
+            </div>
+            <span class="plus-sign">+</span>
+            <div class="rectangle">
+                <img src="https://www.monbento.com/blog/wp-content/uploads/actus/2015/septembre/monbento-gouter-equilibre.png" alt="Image 2">
+            </div>
+        </div>
+        <div class="button-container">
+            <button>Ajouter au panier</button>
+        </div>
+    </div>
+</section>
+
+
+    <script>
+        const burgerMenuButton = document.querySelector('.burger-menu-button');
+        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
+        const burgerMenu = document.querySelector('.burger-menu');
+
+        burgerMenuButton.onclick = function(){
+            burgerMenu.classList.toggle('open');
+            const isOpen = burgerMenu.classList.contains('open');
+            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+    </script>
+    <script src="https://fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
+</body>
+</html>
