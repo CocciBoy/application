@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="about.css">
+    <title>Welcome</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+        <div class="logo">
+            <a href="index.html">ParisPicNic</a>
+        </div>
+        <ul class="links">
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="about.html">A propos</a></li>
+        </ul>
+        <div class="buttons">
+            <a href="seconnecter.html" class="action-button">Se connecter</a>
+        </div>
+        <div class="burger-menu-button">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        </div>
+        <div class="burger-menu">
+            <ul class="links">
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="about.html">A propos</a></li>
+                <div class="divider"></div>
+                <div class="buttons-burger-menu">
+                    <a href="seconnecter.html" class="action-button">Se connecter</a>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+    <section class="about-us">
+        <div class="about-us-content">
+            <h2>À propos de ParisPicNic</h2>
+                <br>
+            <p>
+                ParisPicNic est née d'une envie simple : rendre les pique-niques parisiens plus accessibles et plus savoureux.
+                Fatigués de jongler entre les courses, la préparation et le transport, nous avons imaginé une solution pour
+                profiter pleinement des joies d'un repas en plein air dans les magnifiques jardins et parcs de Paris.
+            </p>
+                <br>
+            <p>
+                Notre mission est de vous faciliter la vie en vous proposant une sélection de paniers pique-nique de qualité,
+                préparés avec soin et remplis de produits frais. Que vous ayez envie d'un classique jambon-beurre,
+                d'un assortiment de fromages et charcuteries, ou d'une option plus originale, nous avons ce qu'il vous faut.
+            </p>
+                <br>
+            <p>
+                Ce qui rend ParisPicNic unique, c'est notre amour pour Paris et notre souci du détail.
+                Nous travaillons avec des traiteurs et des producteurs locaux passionnés pour vous offrir le meilleur de la gastronomie française.
+                Notre application est conçue pour être simple et intuitive, afin que vous puissiez commander en quelques clics
+                et vous concentrer sur l'essentiel : profiter de votre moment.
+            </p>
+                <br>
+            <p>
+                Rejoignez la communauté ParisPicNic et découvrez une nouvelle façon de vivre les pique-niques à Paris.
+                Téléchargez notre application, choisissez votre panier, et laissez-nous nous occuper du reste.
+                Bon appétit et à bientôt dans les parcs !
+            </p>
+                <br>
+            <p>
+                Pour toute question ou suggestion, n'hésitez pas à nous contacter à tamouna22@gmail.com ou au +33 6 05 64 70 73.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        const burgerMenuButton = document.querySelector('.burger-menu-button');
+        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
+        const burgerMenu = document.querySelector('.burger-menu');
+
+        burgerMenuButton.onclick = function(){
+            burgerMenu.classList.toggle('open');
+            const isOpen = burgerMenu.classList.contains('open');
+            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+    </script>
+    <script src="https://fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
+</body>
+</html>

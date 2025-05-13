@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+body {
+    height: auto; /* Ajusté pour permettre au contenu de s'étendre */
+    background-image: url(https://images.pexels.com/photos/2082103/pexels-photo-2082103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+/* ------- Navigation ------- */
+header {
+    position: relative;
+    padding: 0 2rem;
+    background-color: #000000a1;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .links li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ------- Panier ------- */
+.panier {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.panier h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.panier-contenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.panier-articles {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.panier-articles li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.panier-articles li:last-child {
+    border-bottom: none;
+}
+
+.article-info {
+    display: flex;
+    align-items: center;
+}
+
+.article-info img {
+    max-height: 80px;
+    margin-right: 15px;
+}
+
+.article-nom {
+    font-weight: bold;
+    color: #333;
+}
+
+.article-prix {
+    color: #666;
+    margin-right: 15px;
+}
+
+.article-quantite {
+    display: flex;
+    align-items: center;
+}
+
+.article-quantite button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.article-quantite input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.article-sous-total {
+    font-weight: bold;
+    color: #333;
+}
+
+.panier-total {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+.total-prix {
+    color: rgb(0, 225, 255);
+    font-size: larger;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.commander {
+    background-color: rgb(0, 225, 255);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 20px;
+}
+
+.commander:hover {
+    background-color: #00aaff;
+}
