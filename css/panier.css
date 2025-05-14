@@ -161,3 +161,9 @@ header {
 .commander:hover {
     background-color: #00aaff;
 }
+
+i{
+    color: black;
+    font-size: 1.5em;
+    cursor: pointer;
+}
