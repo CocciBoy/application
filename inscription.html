@@ -14,25 +14,27 @@
     <div class="form">
         <div class="container"></div>
         <a href="index.html"><i class="fa-sharp fa-solid fa-house"></i></a>
-        <h3><p>INSCRIPTION</p></h3>
-            <label for="name">name</label>
-            <input type="text" placeholder="Alex" required>
-            <label for="surname">surname</label>
-            <input type="text" placeholder="Dupont" required>
+        <h3><p>REGISTER</p></h3>
+        <form action="php/Register.php" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Alex" required>
+            <label for="surname">Surname</label>
+            <input type="text" name="surname" placeholder="Dupont" required>
 
             <div class="email">
-                <label for="email">email</label>
-                <input type="text" placeholder="alexdupont@gmail.com" required>
+                <label for="email">Email</label>
+                <input type="text" name="email" placeholder="alexdupont@gmail.com" required>
             </div>
-            <div class="mdp">
-                <label for="mdp">password</label>
-                <input type="password" placeholder="********" required>
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="********" required>
             </div>
 
             <div class="submit">
-                <button>S'inscrire</button>
-                <p>vous avez deja un compte ? <br> <a href="seconnecter.html" class="login">Se connecter</a></p>
+                <button type="submit" name="submit">Register</button>
+                <p>You already have an account ? <br> <a href="seconnecter.html" class="login">Login</a></p>
             </div>
+        </form>
         </div>
     </div>
 </body>

@@ -8,26 +8,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/inscription.css">
-    <title>Register</title>
+    <title>Login</title>
 </head>
 <body>
     <div class="form">
         <div class="container"></div>
         <a href="index.html"><i class="fa-sharp fa-solid fa-house"></i></a>
-        <h3><p>Se connecter</p></h3>
+        <h3><p>LOGIN</p></h3>
+        <form action="php/Login.php" method="POST">
             <div class="email">
-                <label for="email">email</label>
-                <input type="text" placeholder="alexdupont@gmail.com" required>
+                <label for="email">Email</label>
+                <input type="text" name="email" placeholder="alexdupont@gmail.com" required>
             </div>
-            <div class="mdp">
-                <label for="mdp">password</label>
-                <input type="password" placeholder="********" required>
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="********" required>
             </div>
 
             <div class="submit">
-                <button>Se connecter</button>
-                <p>Pas de compte ? <br> <a href="inscription.html" class="login">S'inscrire</a></p>
+                <button type="submit">Login</button>
+                <p>No compte ? <br> <a href="inscription.html" class="login">Register</a></p>
             </div>
+        </form>
         </div>
     </div>
 </body>
