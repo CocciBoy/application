@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+// definir la condition isConnected
+$isConnected = isset($_SESSION['user_id']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +26,16 @@
             <li><a href="menu.html">Menu</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="panier.html">My Basket</a></li>
+            <?php if ($isConnected): ?>
+                <li><a href="profil.php" class="active-button">Profil</a></li>
+            <?php endif; ?>
         </ul>
         <div class="buttons">
-            <a href="seconnecter.html" class="action-button">Login</a>
+            <?php if (!$isConnected): ?>
+                <a href="seconnecter.html" class="action-button">Login</a>
+            <?php else: ?>
+                <a href="php/logout.php" class="action-button">Logout</a>
+            <?php endif; ?>
         </div>
         <div class="burger-menu-button">
             <i class="fa-solid fa-bars"></i>
@@ -35,7 +48,14 @@
                 <li><a href="panier.html">My Basket</a></li>
                 <div class="divider"></div>
                 <div class="buttons-burger-menu">
-                    <a href="seconnecter.html" class="action-button">Login</a>
+                    <?php if ($isConnected): ?>
+                        <<!-- Si l'utilisateur est connecté, affiche le bouton logout -->
+                        <li>Bienvenue, <?php echo htmlspecialchars($_SESSION['user_name']); ?></li>
+                        <a href="php/logout.php" class="action-button">Logout</a>
+                    <?php else: ?>
+                        <!-- Si l'utilisateur n'est pas connecté, affiche le bouton Login -->
+                        <a href="seconnecter.html" class="action-button">Login</a>
+                    <?php endif; ?>
                 </div>
             </ul>
         </div>

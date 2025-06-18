@@ -35,7 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['user_name'] = $user['name']; // Stocke le nom correct (lowercase)
                     $_SESSION['user_surname'] = $user['surname']; // Stocke le prénom si tu veux aussi
-                    header('Location: ../index.html'); // Redirige vers la page de profil
+                    $_SESSION['user_email'] = $email; // Stocke l'email pour le profil
+                    header('Location: ../index.php'); // Redirige vers la page de profil
                     exit();
                 } else {
                     $error_msg = "Erreur : Mot de passe incorrect.";

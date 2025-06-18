@@ -31,7 +31,7 @@ $request->execute(array(
 ));
 
 echo "Inscription réussie !";
-    header('Location: ../index.html'); // Redirigez l'utilisateur vers la page principale
+    header('Location: ../index.php'); // Redirigez l'utilisateur vers la page principale
     exit();
 } else {
     echo "Erreur lors de l'inscription.";
